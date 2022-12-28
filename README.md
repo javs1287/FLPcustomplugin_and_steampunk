@@ -19,6 +19,7 @@ The requirements to follow the exercises in this repository are:
 * You have installed the _latest_ ABAP Development Tools (ADT), see [ABAP Development Tools](https://tools.hana.ondemand.com/#abap).
 * You have an SAP S/4HANA 2022 system deployed in an on-premise Sandbox or via SAP Cloud Application Library (CAL).
 * You have fully configured SAP Fiori and have developer access to the backend system where embedded SAP Fiori is deployed.
+* You have fully setup Cloud Connector and created a destination to your backend S/4HANA system.
 
 ## Exercises
 

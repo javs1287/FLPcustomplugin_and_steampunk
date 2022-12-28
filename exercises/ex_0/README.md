@@ -1,4 +1,4 @@
-# UNDERSTANDING SAP FIORI NOTIFICATION FRAMEWORK
+# UNDERSTANDING SAP S/4HANA EMBEDDED STEAMPUNK
 
 ## Introduction
 In this section you will find the required steps to test and develop a Notification Provider for SAP Fiori. To start with this topic we will first provide a high-level description of the framework and how it works.

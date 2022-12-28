@@ -30,7 +30,8 @@ Follow these steps to build a custom SAP Fiori Launchpad Plugin consuming Embedd
 - [Exercise 4 - Adding a Release Contract](exercises/ex_4/)
 - [Exercise 5 - Testing your HTTP Service](exercises/ex_5/)
 - [Exercise 6 - Creating and Deploying a Fiori Launchpad Plugin in SAP Business Application Studio](exercises/ex_6/)
-- [Exercise 7 - Testing your Custom Fiori Launchpad Plugin](exercises/ex_7/)
+- [Exercise 7 - Activating Plug-in on the on-premise ABAP Platform](exercises/ex_6/)
+- [Exercise 8 - Testing your Custom Fiori Launchpad Plugin](exercises/ex_7/)
 
 
 ## License

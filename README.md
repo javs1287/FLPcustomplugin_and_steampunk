@@ -25,16 +25,16 @@ The requirements to follow the exercises in this repository are:
 
 Follow these steps to build a draft-enabled transactional Fiori app with RAP.
 
-- [Getting Started](exercises/ex0/)
-- [Exercise 1 - Database Tables](exercises/ex1/)
-- [Exercise 2 - Core Data Services (CDS) Data Model](exercises/ex2/)
-- [Exercise 3 - CDS Data Model Projection](exercises/ex3/)
-- [Exercise 4 - Metadata Extensions](exercises/ex4/)
-- [Exercise 5 - Business Service](exercises/ex5/)
-- [Exercise 6 - Business Object Behavior](exercises/ex6/)
-- [Exercise 7 - Actions](exercises/ex7/)
-- [Exercise 8 - Determinations](exercises/ex8/)
-- [Exercise 9 - Validations](exercises/ex9/)
+- [Getting Started](exercises/ex_0/)
+- [Exercise 1 - Database Tables](exercises/ex_1/)
+- [Exercise 2 - Core Data Services (CDS) Data Model](exercises/ex_2/)
+- [Exercise 3 - CDS Data Model Projection](exercises/ex_3/)
+- [Exercise 4 - Metadata Extensions](exercises/ex_4/)
+- [Exercise 5 - Business Service](exercises/ex_5/)
+- [Exercise 6 - Business Object Behavior](exercises/ex_6/)
+- [Exercise 7 - Actions](exercises/ex_7/)
+- [Exercise 8 - Determinations](exercises/ex_8/)
+- [Exercise 9 - Validations](exercises/ex_9/)
 
 ## How to obtain support
 

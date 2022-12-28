@@ -2,43 +2,36 @@
 
 ## Description
 
-This repository contains the material for step 5 of the 5 Steps to Fiori training.  
+This repository contains the material for creating a custom SAP Fiori Launchpad plugin with SAP Business Application Studio along with instructions on how to use Embedded Steampunk in SAP S/4HANA 2022 or higher to create custom developer extensibility services for consumption in this custom Fiori Launchpad Plugin.  
 
 ## Overview
 
-In this session we will guide you to build a draft-enabled transactional SAP Fiori Elements Application based on the ABAP RESTful Application Programming Model (in short RAP). The underlying OData service will be exposed using the OData protocol, and the resulting app will look like this:
+In this section we will describe the main activities to be run for creating a custom Fiori Launchpad Plugin that consumes a custom service in Embedded Steampunk in SAP S/4HANA 2022 or higher.
 
-![APP Overview](images/app_overview.png)
+The objective of creating this custom Fiori Launchpad plugin is for your end-users to be able to quickly distinguish which system and client they have logon to in the system. The information will be displayed in the SAP Fiori Launchpad header title section and through this custom Fiori plugin the user will see the System ID along with client number information as shown in the image.
 
-The Fiori app you are going to implement is based on the RAP Flight Reference Scenario. To set the business context the scenario is the following: The department responsible for managing worldwide Travels for multiple Agencies is requesting you to build a new Fiori app with draft capabilities for processing (i.e. creating, updating and deleting) Travels.
-
-Further reading: [Developing Transactional Apps with Draft Capabilities](https://help.sap.com/viewer/923180ddb98240829d935862025004d6/Cloud/en-US/71ba2bec1d0d4f22bc344bba6b569f2e.html)
+![Plugin Overview](images/overview.png)
 
 ## Requirements
 
 The requirements to follow the exercises in this repository are:
 
-* You have installed the _latest_ ABAP Development Tools (ADT), see [ABAP Development Tools](https://tools.hana.ondemand.com/#abap)
-* You have an SAP S/4HANA 2020 system deployed in an on-premise Sandbox or via SAP Cloud Application Library (CAL)
+* You have installed the _latest_ ABAP Development Tools (ADT), see [ABAP Development Tools](https://tools.hana.ondemand.com/#abap).
+* You have an SAP S/4HANA 2022 system deployed in an on-premise Sandbox or via SAP Cloud Application Library (CAL).
+* You have fully configured SAP Fiori and have developer access to the backend system where embedded SAP Fiori is deployed.
 
 ## Exercises
 
-Follow these steps to build a draft-enabled transactional Fiori app with RAP.
-
+Follow these steps to build a custom SAP Fiori Launchpad Plugin consuming Embedded Steampunk Services.
 - [Getting Started](exercises/ex_0/)
-- [Exercise 1 - Database Tables](exercises/ex_1/)
-- [Exercise 2 - Core Data Services (CDS) Data Model](exercises/ex_2/)
-- [Exercise 3 - CDS Data Model Projection](exercises/ex_3/)
-- [Exercise 4 - Metadata Extensions](exercises/ex_4/)
-- [Exercise 5 - Business Service](exercises/ex_5/)
-- [Exercise 6 - Business Object Behavior](exercises/ex_6/)
-- [Exercise 7 - Actions](exercises/ex_7/)
-- [Exercise 8 - Determinations](exercises/ex_8/)
-- [Exercise 9 - Validations](exercises/ex_9/)
+- [Exercise 1 - Setting up Embedded Steampunk](exercises/ex_1/)
+- [Exercise 2 - Creating a backend function module to expose system details](exercises/ex_2/)
+- [Exercise 3 - Creating an HTTP Service](exercises/ex_3/)
+- [Exercise 4 - Adding a Release Contract](exercises/ex_4/)
+- [Exercise 5 - Testing your HTTP Service](exercises/ex_5/)
+- [Exercise 6 - Creating and Deploying a Fiori Launchpad Plugin in SAP Business Application Studio](exercises/ex_6/)
+- [Exercise 7 - Testing your Custom Fiori Launchpad Plugin](exercises/ex_7/)
 
-## How to obtain support
-
-Support for the content in this repository is available during the actual time of the online session for which this content has been designed.
 
 ## License
-Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved. This file is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
+Copyright (c) 2023 SAP SE or an SAP affiliate company. All rights reserved. This file is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.

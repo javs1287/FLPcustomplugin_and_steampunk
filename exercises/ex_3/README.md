@@ -80,15 +80,15 @@ As mentioned above, when coding in Embedded Steampunk, you may only consume "clo
 
 56. Open SAP GUI transaction **/nUCON_HTTP_SERVICES**.
 
-  ![Step56x](images/step56x.png)
+  ![Step56](images/step56.png)
 
 57. Click on Search button and scroll to your service (ZGET_SYSTEM_DETAILS).
 
-  ![Step57x](images/step57x.png)
+  ![Step57](images/step57.png)
 
 58. Select your service (ZGET_SYSTEM_DETAILS) and click on **Activate**
 
-  ![Step58x](images/step58x.png)
+  ![Step58](images/step58.png)
 
   **NOTE** - These last steps are required to activate your custom HTTP service as simply activating the code is not enough for activating an HTTP service.
 

@@ -117,12 +117,30 @@ To create this custom structure package follow the next steps:
   ![Step20](images/step20.png)
 
 ## Create a custom development package for your Embedded Steampunk custom developments
+You have now setup the basics of Embedded Steampunk, however, you still need a main package to store all your custom developments. To do this, follow the next steps:
 
+21. In **Project Explorer**, expand **Favorite Packages** and right-click on your recently created package structure. From the menu select **New >> ABAP Package**
 
-For more information on Notification Providers click on this [link](https://help.sap.com/viewer/68bf513362174d54b58cddec28794093/202110.000/en-US/80331a1a19464223897f9bd60584461f.html).
+  ![Step21](images/step21.png)
+
+22. Enter the following information and click **Next**:
+  * Name: **<< Your package name >>** (for example: ZWRAPPER_FUNC_CL).
+  * Description: **<< Your package description >>** (for example: Wrapper Functions/Classes for Embedded Steampunk).
+  * Superpackage: **<< Your package structure name >>** (this should be the same name you defined in Step 17 - for example: ZEMBEDDED_STEAMPUNK).
+  * Package Type: **Development**
+
+  ![Step22](images/step22.png)
+
+23. Select an existing transport request or create a new one to save your changes and click **Finish**
+
+  ![Step19](images/step19.png)
+
+24. Once created, package details will be displayed in the screen.
+
+  ![Step24](images/step24.png)
 
 ## Next Steps
-In the next section you will start by creating the first object in our custom development architecture: **a Custom Function Module (number 1 in the diagram)**.
+In the next section you will create the first object in our custom development architecture: **a Custom Function Module (number 1 in the diagram)**.
 
   ![Development ARchitecture](images/dev_arch.png)
 

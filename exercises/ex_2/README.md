@@ -8,11 +8,13 @@ To create this custom development package follow the next steps:
 
 25. In the **Project Explorer**, right-click on the ABAP Project for your development system and from the menu, select **New >> ABAP Package**.
 
-  ![Step25](images/step25.png)
+  ![Step16](images/step16.png)
 
 26. Enter the following information and click **Next**:
   * Name: **<< Your package name >>** (for example: ZWRAPPER_FUNC_CL).
   * Description: **<< Your package description >>** (for example: Wrapper Functions/Classes for Embedded Steampunk).
+  * Add to favorite packages: **Active**
+  * Superpackage: **Blank**
   * Package Type: **Development**
 
   ![Step26](images/step26.png)
@@ -28,26 +30,36 @@ To create this custom development package follow the next steps:
 
 29. Once created, package details will be displayed in the screen.
 
+  **NOTE** - Your new package should also appear under the **Favorite Packages** folder.
+
   ![Step29](images/step29.png)
 
 ## Create a custom function module
-30. In **Project Explorer**, expand **Favorite Packages** and right-click on your recently created development package. From the menu select **New >> Function Module**
+Now that you have a package to store your custom backend clasic objects you will start creating a new function module.
+
+30. In **Project Explorer**, expand **Favorite Packages** and right-click on your recently created development package (ZWRAPPER_FUNC_CL) and from the menu select **New >> Other ABAP Repository Object**
 
   ![Step30](images/step30.png)
 
-31. Enter the following information and click **Next**:
-  * Name: **<< Your package name >>**
-  * Description: **<< Your package description >>**
+31. In the dialog screen, search for term "Function". Once results are shown, select entry **ABAP Function Group** and click **Next**.
 
   ![Step31](images/step31.png)
 
-32. Select an existing transport request or create a new one to save your changes and click **Finish**
+32. Enter the following information and click **Next**:
+  * Name: **<< Your function group name >>** (for example: ZREUSE_CODE)
+  * Description: **<< Your function group description >>** (for example: Reuse function group for STMPNK)
+
+  ![Step32](images/step32.png)
+
+33. Select an existing transport request or create a new one to save your changes and click **Finish**
 
   ![Step19](images/step19.png)
 
-33. Once created, your new function module will be displayed in the screen.
+34. Once created, your new function group will be displayed in the screen.
 
-  ![Step33](images/step33.png)
+  **NOTE** - Try expanding the package hierarchy in the **Favorite Packages** section
+
+  ![Step34](images/step34.png)
 
 ## Next Steps
 In the next section you will create the second object in our custom development architecture: **a Custom HTTP Service (number 2 in the diagram)**.

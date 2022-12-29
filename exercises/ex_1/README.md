@@ -15,7 +15,8 @@ You should start by creating a new ABAP project for your SAP S/4HANA 2022 system
   ![Select System](images/select_system.png)
 
 3. Confirm system connection parameters (or edit as needed) and click **Next**.
-  **Note - In this screen you may also create a new connection from scratch.**
+
+  **NOTE - In this screen you may also create a new connection from scratch.**
 
   ![System Details](images/review_details.png)
 
@@ -110,6 +111,7 @@ To create this custom structure package follow the next steps:
   ![Step19](images/step19.png)
 
 20. Once created, package details will be displayed in the screen.
+
   **NOTE** - Notice that ABAP Language Version has already been defined, this means that all underlying packages in this structure will inherit this parameter.
 
   ![Step20](images/step20.png)

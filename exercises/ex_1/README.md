@@ -137,6 +137,8 @@ You have now setup the basics of Embedded Steampunk, however, you still need a m
 
 24. Once created, package details will be displayed in the screen.
 
+  **NOTE** - Try expanding the structure hierarchy in **Project Explorer** as your recently created package will be used in the following sections, additionally, you should notice that the ABAP Language version has already been setup for your development package. This setting will restrict your ABAP code to only consume cloud-released objects. 
+
   ![Step24](images/step24.png)
 
 ## Next Steps

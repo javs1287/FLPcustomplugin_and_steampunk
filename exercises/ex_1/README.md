@@ -7,22 +7,28 @@ In this section you will find the required steps to run the basic setup of Embed
 You should start by creating a new ABAP project for your SAP S/4HANA 2022 system. to do this follow the next steps:
 
 1. Create a new project in ADT.
+
   ![New Project](images/new_project.png)
 
 2. Select the backend system you will connect to and click **Next**.
+
   ![Select System](images/select_system.png)
 
 3. Confirm system connection parameters (or edit as needed) and click **Next**.
   **Note - In this screen you may also create a new connection from scratch.**
+
   ![System Details](images/review_details.png)
 
 4. Enter your system Id to setup a connection to the backend system and click **Next**
+
   ![Login](images/enter_systemId.png)
 
 5. Setup a friendly name for your ABAP project (for example: <SID>_Demo_FLPplugin) and click **Finish**.
+
   ![Setup Friendly Name](images/setup_name.png)
 
 6. Once all steps are run you will find your new project in the **Project Explorer** section in ADT.
+
   ![Confirm](images/confirm_new.png)
 
 ## Notification Framework

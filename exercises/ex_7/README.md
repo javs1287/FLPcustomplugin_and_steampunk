@@ -1,53 +1,149 @@
-# UNDERSTANDING SAP FIORI NOTIFICATION FRAMEWORK
+# SETTING UP EMBEDDED STEAMPUNK
 
 ## Introduction
-In this section you will find the required steps to test and develop a Notification Provider for SAP Fiori. To start with this topic we will first provide a high-level description of the framework and how it works.
+In this section you will find the required steps to run the basic setup of Embedded Steampunk. This step is mandatory for you to run the exercise end-to-end.
 
-## Notification Framework – Overview
-The Notification framework is an embedded engine included in your SAP S/4HANA instances starting with SAP S/4HANA 1610 and ABAP stack 7.52. This framework is completely ABAP based and consists of 3 elements:
+## Create a new ABAP Project in ADT (Eclipse)
+You should start by creating a new ABAP project for your SAP S/4HANA 2022 system. To do this follow the next steps:
 
--	Notification Metadata
--	Notification Framework
--	Notification Provider
+1. Create a new project in ADT.
 
-## Notification Metadata
-Refers to the payload needed to create and display the notification. The notification objects is a standarized structure containing 4 main elements:
--	Notification type/description – Describes the notification provider object that will be used to render the notification in the SAP Fiori Launchpad
--	Notification Properties – Describes the parameters that will be passed to the underlying ABAP classes of the notification provider to display dynamic values in the notification text.
--	Notification Recipients – Describes the technical User ID’s of the people who will receive the notification. One notification can have multiple recipients.
--	Notification Target Parameters – Describes the semantic object, action and navigation parameters of the application that will be displayed when a user clicks on the notification.
+  ![New Project](images/new_project.png)
 
-If you want to become familiar with the notifications data structure, you can take a look at the following JSON structure where you can identify the main elements of the notification payload
+2. Select the backend system you will connect to and click **Next**.
 
-  ![Example of Notification Payload](images/payload_sample.png)
+  ![Select System](images/select_system.png)
 
-## Notification Framework
-The notification framework is a set of standarized ABAP classes and services which control the creation, deployment and maintenance of notifications in the SAP ABAP stack. Amongst the most important features provided by the framework we can list the following:
+3. Confirm system connection parameters (or edit as needed) and click **Next**.
 
-### Transactions:
--	/IWNGW/BEP_NPREG – To register a custom or standard notification provider.
--	/IWNGW/VB_REG_P – To activate notification providers.
--	/IWNGW/H_CLEAR_CACHE – To clear the notification metadata in the server
--	/IWNGW/H_CLEAR_NOTIF – To clear received notifications for a specific user
+  **NOTE - In this screen you may also create a new connection from scratch.**
 
-  ![Example of custom notification registration in transaction /IWNGW/BEP_NREG](images/registration_bepnreg.png)
+  ![System Details](images/review_details.png)
 
-### Services:
--	/IWNGW/NOTIFICATION_SRV – Odata V4 service responsible for the extraction of notification payload in the SAP Fiori Launchpad
--	/IWNGW/CREATE_NOTIFICATION_SRV – Standard OData V2 service that offers the capability of creating notifications through HTTP Post operations.
+4. Enter your system Id to setup a connection to the backend system and click **Next**
 
-  ![Example of activation of Notification service in transaction /IWFND/V4_ADMIN](images/v4admin_registration.png)
+  ![Login](images/enter_systemId.png)
 
-## Notification Provider
-A notification provider is a standard or custom ABAP class in your SAP S/4HANA system based on standard interface: /IWNGW/IF_NOTIF_PROVIDER.
+5. Setup a friendly name for your ABAP project (for example: <SID>_Demo_FLPplugin) and click **Finish**.
 
-Development of a custom notification provider implies leveraging a standard inerface meaning a set of standard methods must be implemented on your own for the notifications to work correctly. A brief description of each of these methods is provided:
+  ![Setup Friendly Name](images/setup_name.png)
 
--	/IWNGW/IF_NOTIF_PROVIDER~GET_NOTIFICATION_PARAMETERS: Returns notification instance specific parameters (defined in the payload). These parameters are combined with text templates (text message) to form the text of a notification.
--	/IWNGW/IF_NOTIF_PROVIDER~GET_NOTIFICATION_TYPE: Returns metadata related to the notification type like Provider ID, available notification parameters and actions.
--	/IWNGW/IF_NOTIF_PROVIDER~GET_NOTIFICATION_TYPE_TEXT: Returns language dependent text related to the notification type, including text templates and action texts.
--	/IWNGW/IF_NOTIF_PROVIDER~HANDLE_ACTION: Required when notification allows end users to trigger actions (defined in GET_NOTIFICATION_TYPE).
+6. Once all steps are run you will find your new project in the **Project Explorer** section in ADT.
 
-  ![Example of custom class implementation](images/sample_classimplementation.png)
+  ![Confirm](images/confirm_new.png)
 
-For more information on Notification Providers click on this [link](https://help.sap.com/viewer/68bf513362174d54b58cddec28794093/202110.000/en-US/80331a1a19464223897f9bd60584461f.html).
+## Create a custom software component
+Using developer extensibility requires a separate software component if you want to use it in parallel to classic extensibility.
+
+To create this custom software component follow the next steps:
+
+7. Highlight your recently created project in the **Project Explorer** section in ADT and click on button **Open SAP GUI**
+
+  ![Step7](images/step7.png)
+
+8. In the pop-up dialog, confirm project selection is correct and click **Ok**.
+
+  ![Step8](images/step8.png)
+
+9. ADT should now display a classic SAP GUI screen
+
+  ![Step9](images/step9.png)
+
+10. In this GUI screen run transaction **SE38**
+
+  ![Step10](images/step10.png)
+
+11. Run program **RSMAINTAIN_SWCOMPONENTS**.
+
+  ![Step11](images/step11.png)
+
+12. Click on the **Add** button.
+
+  ![Step12](images/step12.png)
+
+13. In the dialog screen enter the following details and **Save**:
+
+  * Component: **<< Your component name >>** (for example: ZEMBEDDED_STEAMPUNK)
+  * Release: **DEV**
+  * Development type: **Transportable**
+  * ABAP Language version: **ABAP for Cloud**
+  * Component type: **K**
+  * Description: **<< Your component description >>** (for example: Custom Component for Steampunk Development)
+
+  ![Step13](images/step13.png)
+
+14. To save your component to a transport request start by selecting your new component followed by clicking on the **Transport Software Component Entry**, you will be prompted for a workbench request (enter details as needed and save).
+
+  ![Step14](images/step14.png)
+
+15. Once your software component is saved to a transport request, you need to release such transport request before continuing with the next steps. To release your transport, navigate to the **Transport Organizer** tab in ADT, right click on your transport task and release.
+
+  ![Step15](images/step15.png)
+
+  **NOTE** - If you cannot find **Transport Organizer** navigate to: **Window >> Show View >> Others**. Search for transport in search help and once you find the view click **Open**.
+
+  ![Step15trbl](images/step15trbl.png)
+
+## Create a custom structure package
+All your custom development packages would need to be located below a structure package that is specified to use ABAP language version ABAP for Cloud Development, this way the system differentiates objects created through classic extensibility or through developer extensibility (Embedded Steampunk).
+
+To create this custom structure package follow the next steps:
+
+16. In the **Project Explorer**, right-click on the ABAP Project for your development system and from the menu, select **New >> ABAP Package**.
+
+  ![Step16](images/step16.png)
+
+17. Enter the following information and click **Next**:
+  * Name: **<< Your component name >>** (this should be the same name you defined in Step 13 - for example: ZEMBEDDED_STEAMPUNK).
+  * Description: **<< Your structure description >>** (for example: Embedded Steampunk Cloud-like developments).
+  * Add to favorite packages: **Active**
+  * Package Type: **Structure**
+
+  ![Step17](images/step17.png)
+
+18. Enter the software component where this objects will be allocated and click **Next**.
+  * Software Component: **<< Your component name >>** (this should be the same name you defined in Step 13 - for example: ZEMBEDDED_STEAMPUNK).
+
+  ![Step18](images/step18.png)
+
+19. Select an existing transport request or create a new one to save your changes and click **Finish**
+
+  ![Step19](images/step19.png)
+
+20. Once created, package details will be displayed in the screen.
+
+  **NOTE** - Notice that ABAP Language Version has already been defined, this means that all underlying packages in this structure will inherit this parameter.
+
+  ![Step20](images/step20.png)
+
+## Create a custom development package for your Embedded Steampunk custom developments
+You have now setup the basics of Embedded Steampunk, however, you still need a main package to store all your custom developments. To do this, follow the next steps:
+
+21. In **Project Explorer**, expand **Favorite Packages** and right-click on your recently created package structure. From the menu select **New >> ABAP Package**
+
+  ![Step21](images/step21.png)
+
+22. Enter the following information and click **Next**:
+  * Name: **<< Your package name >>** (for example: ZWRAPPER_FUNC_CL).
+  * Description: **<< Your package description >>** (for example: Wrapper Functions/Classes for Embedded Steampunk).
+  * Superpackage: **<< Your package structure name >>** (this should be the same name you defined in Step 17 - for example: ZEMBEDDED_STEAMPUNK).
+  * Package Type: **Development**
+
+  ![Step22](images/step22.png)
+
+23. Select an existing transport request or create a new one to save your changes and click **Finish**
+
+  ![Step19](images/step19.png)
+
+24. Once created, package details will be displayed in the screen.
+
+  **NOTE** - Try expanding the structure hierarchy in **Project Explorer** as your recently created package will be used in the following sections, additionally, you should notice that the ABAP Language version has already been setup for your development package. This setting will restrict your ABAP code to only consume cloud-released objects. 
+
+  ![Step24](images/step24.png)
+
+## Next Steps
+In the next section you will create the first object in our custom development architecture: **a Custom Function Module (number 1 in the diagram)**.
+
+  ![Development ARchitecture](images/dev_arch.png)
+
+To continue with this exercise go to [Exercise 1](../ex_2)

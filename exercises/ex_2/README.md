@@ -1,53 +1,57 @@
-# UNDERSTANDING SAP FIORI NOTIFICATION FRAMEWORK
+# CREATING A BACKEND FUNCTION MODULE TO EXPOSE SYSTEM DETAILS
 
 ## Introduction
-In this section you will find the required steps to test and develop a Notification Provider for SAP Fiori. To start with this topic we will first provide a high-level description of the framework and how it works.
+In this section you will find the steps to create a wrapper function module to be later consumed via code in Embedded Steampunk. Overall, you will be creating classic extensibility objects you are already familiar with like packages and function modules.
 
-## Notification Framework – Overview
-The Notification framework is an embedded engine included in your SAP S/4HANA instances starting with SAP S/4HANA 1610 and ABAP stack 7.52. This framework is completely ABAP based and consists of 3 elements:
+## Create a custom development package for Classic Developments
+To create this custom development package follow the next steps:
 
--	Notification Metadata
--	Notification Framework
--	Notification Provider
+25. In the **Project Explorer**, right-click on the ABAP Project for your development system and from the menu, select **New >> ABAP Package**.
 
-## Notification Metadata
-Refers to the payload needed to create and display the notification. The notification objects is a standarized structure containing 4 main elements:
--	Notification type/description – Describes the notification provider object that will be used to render the notification in the SAP Fiori Launchpad
--	Notification Properties – Describes the parameters that will be passed to the underlying ABAP classes of the notification provider to display dynamic values in the notification text.
--	Notification Recipients – Describes the technical User ID’s of the people who will receive the notification. One notification can have multiple recipients.
--	Notification Target Parameters – Describes the semantic object, action and navigation parameters of the application that will be displayed when a user clicks on the notification.
+  ![Step25](images/step25.png)
 
-If you want to become familiar with the notifications data structure, you can take a look at the following JSON structure where you can identify the main elements of the notification payload
+26. Enter the following information and click **Next**:
+  * Name: **<< Your package name >>** (for example: ZWRAPPER_FUNC_CL).
+  * Description: **<< Your package description >>** (for example: Wrapper Functions/Classes for Embedded Steampunk).
+  * Package Type: **Development**
 
-  ![Example of Notification Payload](images/payload_sample.png)
+  ![Step26](images/step26.png)
 
-## Notification Framework
-The notification framework is a set of standarized ABAP classes and services which control the creation, deployment and maintenance of notifications in the SAP ABAP stack. Amongst the most important features provided by the framework we can list the following:
+27. Enter the software component where this objects will be allocated and click **Next**.
+  * Software Component: **HOME**
 
-### Transactions:
--	/IWNGW/BEP_NPREG – To register a custom or standard notification provider.
--	/IWNGW/VB_REG_P – To activate notification providers.
--	/IWNGW/H_CLEAR_CACHE – To clear the notification metadata in the server
--	/IWNGW/H_CLEAR_NOTIF – To clear received notifications for a specific user
+  ![Step27](images/step27.png)
 
-  ![Example of custom notification registration in transaction /IWNGW/BEP_NREG](images/registration_bepnreg.png)
+28. Select an existing transport request or create a new one to save your changes and click **Finish**
 
-### Services:
--	/IWNGW/NOTIFICATION_SRV – Odata V4 service responsible for the extraction of notification payload in the SAP Fiori Launchpad
--	/IWNGW/CREATE_NOTIFICATION_SRV – Standard OData V2 service that offers the capability of creating notifications through HTTP Post operations.
+  ![Step19](images/step19.png)
 
-  ![Example of activation of Notification service in transaction /IWFND/V4_ADMIN](images/v4admin_registration.png)
+29. Once created, package details will be displayed in the screen.
 
-## Notification Provider
-A notification provider is a standard or custom ABAP class in your SAP S/4HANA system based on standard interface: /IWNGW/IF_NOTIF_PROVIDER.
+  ![Step29](images/step29.png)
 
-Development of a custom notification provider implies leveraging a standard inerface meaning a set of standard methods must be implemented on your own for the notifications to work correctly. A brief description of each of these methods is provided:
+## Create a custom function module
+30. In **Project Explorer**, expand **Favorite Packages** and right-click on your recently created development package. From the menu select **New >> Function Module**
 
--	/IWNGW/IF_NOTIF_PROVIDER~GET_NOTIFICATION_PARAMETERS: Returns notification instance specific parameters (defined in the payload). These parameters are combined with text templates (text message) to form the text of a notification.
--	/IWNGW/IF_NOTIF_PROVIDER~GET_NOTIFICATION_TYPE: Returns metadata related to the notification type like Provider ID, available notification parameters and actions.
--	/IWNGW/IF_NOTIF_PROVIDER~GET_NOTIFICATION_TYPE_TEXT: Returns language dependent text related to the notification type, including text templates and action texts.
--	/IWNGW/IF_NOTIF_PROVIDER~HANDLE_ACTION: Required when notification allows end users to trigger actions (defined in GET_NOTIFICATION_TYPE).
+  ![Step30](images/step30.png)
 
-  ![Example of custom class implementation](images/sample_classimplementation.png)
+31. Enter the following information and click **Next**:
+  * Name: **<< Your package name >>**
+  * Description: **<< Your package description >>**
 
-For more information on Notification Providers click on this [link](https://help.sap.com/viewer/68bf513362174d54b58cddec28794093/202110.000/en-US/80331a1a19464223897f9bd60584461f.html).
+  ![Step31](images/step31.png)
+
+32. Select an existing transport request or create a new one to save your changes and click **Finish**
+
+  ![Step19](images/step19.png)
+
+33. Once created, your new function module will be displayed in the screen.
+
+  ![Step33](images/step33.png)
+
+## Next Steps
+In the next section you will create the second object in our custom development architecture: **a Custom HTTP Service (number 2 in the diagram)**.
+
+  ![Development Architecture](images/dev_arch.png)
+
+To continue with this exercise go to [Exercise 3](../ex_3)

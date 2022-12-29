@@ -124,8 +124,9 @@ You have now setup the basics of Embedded Steampunk, however, you still need a m
   ![Step21](images/step21.png)
 
 22. Enter the following information and click **Next**:
-  * Name: **<< Your package name >>** (for example: ZWRAPPER_FUNC_CL).
-  * Description: **<< Your package description >>** (for example: Wrapper Functions/Classes for Embedded Steampunk).
+  * Name: **<< Your package name >>** (for example: ZCUSTOM_OBJECTS4STMPNK).
+  * Description: **<< Your package description >>** (for example: Custom Objects for Embedded Steampunk).
+  * Add to favorite packages: **Inactive**
   * Superpackage: **<< Your package structure name >>** (this should be the same name you defined in Step 17 - for example: ZEMBEDDED_STEAMPUNK).
   * Package Type: **Development**
 
@@ -137,7 +138,7 @@ You have now setup the basics of Embedded Steampunk, however, you still need a m
 
 24. Once created, package details will be displayed in the screen.
 
-  **NOTE** - Try expanding the structure hierarchy in **Project Explorer** as your recently created package will be used in the following sections, additionally, you should notice that the ABAP Language version has already been setup for your development package. This setting will restrict your ABAP code to only consume cloud-released objects. 
+  **NOTE** - Try expanding the structure hierarchy in **Project Explorer** as your recently created package will be used in the following sections, additionally, you should notice that the ABAP Language version has already been setup for your development package. This setting will restrict your ABAP code to only consume cloud-released objects.
 
   ![Step24](images/step24.png)
 
@@ -146,4 +147,4 @@ In the next section you will create the first object in our custom development a
 
   ![Development ARchitecture](images/dev_arch.png)
 
-To continue with this exercise go to [Exercise 1](../ex_2)
+To continue with this exercise go to [Exercise 2](../ex_2)

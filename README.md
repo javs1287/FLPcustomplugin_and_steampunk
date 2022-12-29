@@ -24,7 +24,7 @@ The requirements to follow the exercises in this repository are:
 ## Exercises
 
 Follow these steps to build a custom SAP Fiori Launchpad Plugin consuming Embedded Steampunk Services.
-- [Getting Started](exercises/ex_0/)
+- [Understanding SAP S/4HANA Embedded Steampunk](exercises/ex_0/)
 - [Exercise 1 - Setting up Embedded Steampunk](exercises/ex_1/)
 - [Exercise 2 - Creating a backend function module to expose system details](exercises/ex_2/)
 - [Exercise 3 - Creating an HTTP Service](exercises/ex_3/)

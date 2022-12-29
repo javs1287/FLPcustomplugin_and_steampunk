@@ -1,42 +1,35 @@
-# UNDERSTANDING SAP FIORI NOTIFICATION FRAMEWORK
+# SETTING UP EMBEDDED STEAMPUNK
 
 ## Introduction
-In this section you will find the required steps to test and develop a Notification Provider for SAP Fiori. To start with this topic we will first provide a high-level description of the framework and how it works.
+In this section you will find the required steps to run the basic setup of Embedded Steampunk. This step is mandatory for you to run the exercise end-to-end.
 
-## Notification Framework – Overview
-The Notification framework is an embedded engine included in your SAP S/4HANA instances starting with SAP S/4HANA 1610 and ABAP stack 7.52. This framework is completely ABAP based and consists of 3 elements:
+## Create a new ABAP Project in ADT (Eclipse)
+You should start by creating a new ABAP project for your SAP S/4HANA 2022 system. to do this follow the next steps:
 
--	Notification Metadata
--	Notification Framework
--	Notification Provider
+1. Create a new project in ADT.
+  ![New Project](images/new_project.png)
 
-## Notification Metadata
-Refers to the payload needed to create and display the notification. The notification objects is a standarized structure containing 4 main elements:
--	Notification type/description – Describes the notification provider object that will be used to render the notification in the SAP Fiori Launchpad
--	Notification Properties – Describes the parameters that will be passed to the underlying ABAP classes of the notification provider to display dynamic values in the notification text.
--	Notification Recipients – Describes the technical User ID’s of the people who will receive the notification. One notification can have multiple recipients.
--	Notification Target Parameters – Describes the semantic object, action and navigation parameters of the application that will be displayed when a user clicks on the notification.
+2. Select the backend system you will connect to and click **Next**.
+  ![Select System](images/select_system.png)
 
-If you want to become familiar with the notifications data structure, you can take a look at the following JSON structure where you can identify the main elements of the notification payload
+3. Confirm system connection parameters (or edit as needed) and click **Next**.
+  **Note - In this screen you may also create a new connection from scratch.**
+  ![System Details](images/review_details.png)
 
-  ![Example of Notification Payload](images/payload_sample.png)
+4. Enter your system Id to setup a connection to the backend system and click **Next**
+  ![Login](images/enter_systemId.png)
+
+5. Setup a friendly name for your ABAP project (for example: <SID>_Demo_FLPplugin) and click **Finish**.
+  ![Setup Friendly Name](images/setup_name.png)
+
+6. Once all steps are run you will find your new project in the **Project Explorer** section in ADT.
+  ![Confirm](images/confirm_new.png)
 
 ## Notification Framework
 The notification framework is a set of standarized ABAP classes and services which control the creation, deployment and maintenance of notifications in the SAP ABAP stack. Amongst the most important features provided by the framework we can list the following:
 
 ### Transactions:
--	/IWNGW/BEP_NPREG – To register a custom or standard notification provider.
--	/IWNGW/VB_REG_P – To activate notification providers.
--	/IWNGW/H_CLEAR_CACHE – To clear the notification metadata in the server
--	/IWNGW/H_CLEAR_NOTIF – To clear received notifications for a specific user
 
-  ![Example of custom notification registration in transaction /IWNGW/BEP_NREG](images/registration_bepnreg.png)
-
-### Services:
--	/IWNGW/NOTIFICATION_SRV – Odata V4 service responsible for the extraction of notification payload in the SAP Fiori Launchpad
--	/IWNGW/CREATE_NOTIFICATION_SRV – Standard OData V2 service that offers the capability of creating notifications through HTTP Post operations.
-
-  ![Example of activation of Notification service in transaction /IWFND/V4_ADMIN](images/v4admin_registration.png)
 
 ## Notification Provider
 A notification provider is a standard or custom ABAP class in your SAP S/4HANA system based on standard interface: /IWNGW/IF_NOTIF_PROVIDER.
@@ -51,3 +44,6 @@ Development of a custom notification provider implies leveraging a standard iner
   ![Example of custom class implementation](images/sample_classimplementation.png)
 
 For more information on Notification Providers click on this [link](https://help.sap.com/viewer/68bf513362174d54b58cddec28794093/202110.000/en-US/80331a1a19464223897f9bd60584461f.html).
+
+## Next Steps
+To continue with this exercise go to [Exercise 1](../ex_2)

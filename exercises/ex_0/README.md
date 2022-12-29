@@ -57,6 +57,17 @@ Based on the concepts above, we would then identify that our exercise would fit 
 ## Is this all there is to know about Embedded Steampunk?
 Fortunately not, but for the scope of this exercise we will limit to the concepts described above through a hands-on approach.
 
+Note that using Embedded Steampunk you can create a variety of services like:
+1. External Services:
+    - HTTP
+    - RFC
+    - SOAP
+2. APIs
+    - HTTP
+    - RFC
+3. Services for consumption of ABAP Managed Data via ODBC-Based Clients
+4. Analytical Models / Live Data Connections
+
 For more information on Embedded Steampunk and possible use cases we strongly recommend reviewing the contents in the [SAP Help Documentation of the ABAP platform ](https://help.sap.com/docs/ABAP_PLATFORM_NEW/b5670aaaa2364a29935f40b16499972d/155909e3569941e08831c78cf4c2d495.html).
 
 To continue with this exercise go to [Exercise 1](../ex_1)

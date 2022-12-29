@@ -117,7 +117,7 @@ In this section we will briefly explain how to test the code.
   ![Step60dbg](images/step60dbg.png)
 
 ## Next Steps
-In the next section you will create the second object in our custom development architecture: **a Custom Fiori Launchpad Service (number 2 in the diagram)**.
+In the next section you will create the second object in our custom development architecture: **a Custom Fiori Launchpad Service (number 3 in the diagram)**.
 
   ![Development Architecture](images/dev_arch.png)
 

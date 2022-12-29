@@ -79,12 +79,18 @@ To create this custom software component follow the next steps:
 
   ![Step15](images/step15.png)
 
-  **NOTE** - If you cannot find **Transport Organizer** navigate to: **Window -> Show View -> Others**. Search for transport in search help and once you find the view click **Open**.
+  **NOTE** - If you cannot find **Transport Organizer** navigate to: **Window >> Show View >> Others**. Search for transport in search help and once you find the view click **Open**.
 
   ![Step15trbl](images/step15trbl.png)
 
 ## Create a custom structure package
 All your custom development packages would need to be located below a structure package that is specified to use ABAP language version ABAP for Cloud Development, this way the system differentiates objects created through classic extensibility or through developer extensibility (Embedded Steampunk).
+
+To create this custom structure package follow the next steps:
+
+16. In the **Project Explorer**, right-click on the ABAP Project for your development system and from the menu, select **New >> ABAP Package**.
+
+  ![Step16](images/step16.png)
 
 ## Create a custom development package for your Embedded Steampunk custom developments
 
@@ -92,7 +98,7 @@ All your custom development packages would need to be located below a structure 
 For more information on Notification Providers click on this [link](https://help.sap.com/viewer/68bf513362174d54b58cddec28794093/202110.000/en-US/80331a1a19464223897f9bd60584461f.html).
 
 ## Next Steps
-In the next section you will start by creating the first object in our custom development architecture: a Custom Function Module
+In the next section you will start by creating the first object in our custom development architecture: **a Custom Function Module (number 1 in the diagram)**.
 
   ![Development ARchitecture](images/dev_arch.png)
 

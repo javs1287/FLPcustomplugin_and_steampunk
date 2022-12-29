@@ -92,6 +92,28 @@ To create this custom structure package follow the next steps:
 
   ![Step16](images/step16.png)
 
+17. Enter the following information and click **Next**:
+  * Name: **<< Your component name >>** (this should be the same name you defined in Step 13 - for example: ZEMBEDDED_STEAMPUNK).
+  * Description: **<< Your structure description >>** (for example: Embedded Steampunk Cloud-like developments).
+  * Add to favorite packages: **Active**
+  * Package Type: **Structure**
+
+  ![Step17](images/step17.png)
+
+18. Enter the software component where this objects will be allocated and click **Next**.
+  * Software Component: **<< Your component name >>** (this should be the same name you defined in Step 13 - for example: ZEMBEDDED_STEAMPUNK).
+
+  ![Step18](images/step18.png)
+
+19. Select an existing transport request or create a new one to save your changes and click **Finish**
+
+  ![Step19](images/step19.png)
+
+20. Once created, package details will be displayed in the screen.
+  **NOTE** - Notice that ABAP Language Version has already been defined, this means that all underlying packages in this structure will inherit this parameter.
+
+  ![Step20](images/step20.png)
+
 ## Create a custom development package for your Embedded Steampunk custom developments
 
 

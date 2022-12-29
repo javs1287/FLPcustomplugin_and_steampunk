@@ -6,13 +6,14 @@ Embedded Steampunk is a new feature included in SAP S/4HANA on-premise from vers
 Yes, this means you will build web services but it does not mean all of it will be OData as you will find Embedded Steampunk / Developer extensibility supports other communication protocols.
 
 ## Embedded Steampunk and the Clean Core
-In the context of an SAP S/4HANA implementation you need to remember that one of the reasons behind this implementation model is to have SAP S/4HANA become an enabler for moving your architecture, business processes and custom code to a cloud like, service oriented model. Meaning that on the long run, you would like your SAP S/4HANA system behave as similar as possible to an SAP S/4HANA Public Cloud system. To achieve this you may slowly and incrementally apply the new extensibility approaches according to your needs and adoption feasibility.
+In the context of an SAP S/4HANA implementation you need to remember that one of the reasons behind this implementation model is to have SAP S/4HANA become an enabler for moving your architecture, business processes and custom code to a cloud like, service oriented model. Meaning that on the long run, you would like your SAP S/4HANA system behave as similar as possible to an SAP S/4HANA Public Cloud system.
 
-This will, in turn, help you reduce your TCO by, for example, reducing test and adoption efforts during a system upgrade.
+To achieve this status you may slowly and incrementally apply the new extensibility approaches according to your needs and adoption feasibility.
 
-It will also allow you to innovate faster and react faster on your business requirements as you can easily adopt new technologies through a service oriented model.
-
-And it will also allow you to become "cloud ready" as you will be laying out the foundation for you to move to cloud oriented consumption models where, for example, you could implement development models like RAP, also know as ABAP RESTful Application Programming Model or CAP, which stands for SAP Cloud Application Programming Model
+This will, in turn:
+- Help you reduce your TCO by, for example, reducing test and adoption efforts during a system upgrade.
+- It will also allow you to innovate faster and react faster on your business requirements as you can easily adopt new technologies through a service oriented model.
+- And it will also allow you to become "cloud ready" as you will be laying out the foundation for you to move to cloud oriented consumption models where, for example, you could implement development models like RAP, also know as ABAP RESTful Application Programming Model or CAP, which stands for SAP Cloud Application Programming Model
 
 
   ![Reasons to Clean Core](images/reasons.png)

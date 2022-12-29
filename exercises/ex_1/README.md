@@ -62,12 +62,12 @@ To create this custom software component follow the next steps:
 
 13. In the dialog screen enter the following details and **Save**:
 
-  * Component:              <You component name> (for example: ZEMBEDDED_STEAMPUNK)
-  * Release:                DEV
-  * Development type:       Transportable
-  * ABAP Language version:  ABAP for Cloud
-  * Component type:         K
-  * Description:            <Your component description> (for example: Custom Component for Steampunk Development)
+  * Component: **<<Your component name>>** (for example: ZEMBEDDED_STEAMPUNK)
+  * Release: **DEV**
+  * Development type: **Transportable**
+  * ABAP Language version: **ABAP for Cloud**
+  * Component type: **K**
+  * Description: **<<Your component description>>** (for example: Custom Component for Steampunk Development)
 
   ![Step13](images/step13.png)
 

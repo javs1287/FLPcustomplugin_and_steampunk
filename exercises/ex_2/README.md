@@ -85,7 +85,9 @@ In this section we will briefly explain what the copied code is doing.
   ![Step39](images/step39.png)
 
 39.1. In section "1" we are calling a function to validate if the input parameter (User ID) exists in the system, meaning we are checking if the provided User ID exists in the system
+
 39.2. In section "2" we are validating the response from the previous function call and validating if response code "088" is received, if this is the case it means the User ID does not exist in the system hence we setup the return values to "0" and forward the standard error message.
+
 39.3. In section "3" if we know the User ID exists in the system, we call a second function to retrieve system information and pass the values as a response.
 
 This simple function will be used by the SAP Fiori Launchpad plugin to show the System ID and Client number to the end-user.

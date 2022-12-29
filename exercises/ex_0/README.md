@@ -14,9 +14,12 @@ It will also allow you to innovate faster and react faster on your business requ
 
 And it will also allow you to become "cloud ready" as you will be laying out the foundation for you to move to cloud oriented consumption models where, for example, you could implement development models like RAP, also know as ABAP RESTful Application Programming Model or CAP, which stands for SAP Cloud Application Programming Model
 
+
   ![Reasons to Clean Core](images/reasons.png)
 
+
 **But how does this relate to the clean core?**
+
 We can define clean core as an approach to stay as close as possible to the SAP standard models while still having flexibility to adapt business processes to your needs at a fast rate.
 
 There's overall four steps in this journey to achieving a clean core:
@@ -26,11 +29,14 @@ There's overall four steps in this journey to achieving a clean core:
 3. Third, if previous options are not possible, you may also consider relocating your extensions, meaning, for example, moving your custom code to SAP BTP services like SAP BTP, ABAP Environment and maintaining the lifecycle of these objects on a separate system and landscape.
 4. Fourth, if you find out there are no options for you to "clean your core" you can simply document these deviations and prepare to move when new extensibility options become available to your specific use cases.
 
+
   ![Journey](images/cleancore.png)
+
 
 With the steps of the journey outlined I'd like to provide some clarity on this approach as yes, it is true, not all of your custom code would be a candidate for "clean-core" and yes this is not a "quick" activity as it requires code and architecture analysis and time for you to take the best decisions to optimize your custom code lifecycle management, which is the main objective of the "clean-core" concept.
 
 Additionally, it is not mandatory for all of your custom code to go through all the steps, you can have scenarios where only one of the steps or a combination is valid.
+
 
 ## Where does this exercise fit and how would it work?
 For this exercise you will be building three main objects on three different layers that would interact between them to provide a clean core solution.
@@ -39,11 +45,13 @@ For this exercise you will be building three main objects on three different lay
 
 1. You will start by creating an upgrade stable object. In this case through a custom function module based only on standard function modules and BAPIs to provide the required information from the system. This custom function module would act as a wrapper for standard objects.
 2. You custom function module will then be consumed by a custom HTTP Service. This service will contain a small footprint easing the maintenance effort and will be created on top of the Embedded Steampunk "engine" meaning at this layer you will be using cloud-like ABAP code which is also upgrade stable and even gives you options at a later point to decouple the code in this layer and relocate to other solutions like SAP ABAP Cloud Environment on BTP.
-3. A custom Fiori Plugin created on SAP Business Application Studio. In this object you will implement custom code to call the custom HTTP service, manipulate data from the response (if needed) and publish information in the SAP Fiori Launchpad. Important to note is that Fiori Launchpad Plugins load asyncrhonously so you will face a challenge to define at what moment should the plugin should be rendered in the Fiori Launchpad without affecting other features in this layer.
+3. A custom Fiori Plugin created on SAP Business Application Studio. In this object you will implement custom code to call the custom HTTP service, manipulate data from the response (if needed) and publish information in the SAP Fiori Launchpad. Important to note is that Fiori Launchpad Plugins load asynchronously so you will face a challenge to define at what moment should the plugin should be rendered in the Fiori Launchpad without affecting other features in this layer.
 
 Based on the concepts above, we would then identify that our exercise would fit in the second option in the clean core journey
 
+
   ![Journey](images/cleancore_options.png)
+
 
 ## Is this all there is to know about Embedded Steampunk
 Fortunately not, but for the scope of this exercise we will limit to the concepts described above through a hands-on approach.

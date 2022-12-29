@@ -4,35 +4,42 @@
 In this section you will find the steps to create an HTTP Service in Embedded Steampunk which you cal later call from your browser
 
 ## Create a custom HTTP Service in Embedded Steampunk
-To create this custom development package follow the next steps:
+To create this custom HTTP Service, you would need to work in the Embedded Steampunk development package you created earlier as part of [Exercise 1](../ex_1#create-a-custom-development-package-for-your-embedded-steampunk-custom-developments).
 
-42. In the **Project Explorer**, right-click on the ABAP Project for your development system and from the menu, select **New >> ABAP Package**.
+42. In **Project Explorer**, right-click on the ABAP Package **"ZCUSTOM_OBJECTS4STMPNK"**. From the menu, select **New >> Other ABAP Repository Object**.
 
-  ![Step16](images/step16.png)
+  ![Step42](images/step42.png)
 
-26. Enter the following information and click **Next**:
-  * Name: **<< Your package name >>** (for example: ZWRAPPER_FUNC_CL).
-  * Description: **<< Your package description >>** (for example: Wrapper Functions/Classes for Embedded Steampunk).
-  * Add to favorite packages: **Active**
-  * Superpackage: **Blank**
-  * Package Type: **Development**
+43. In the dialog window, search for keyword: "Service". Once results are displayed, select entry **HTTP Service** and click **Next**.
 
-  ![Step26](images/step26.png)
+  ![Step43](images/step43.png)
 
-27. Enter the software component where this objects will be allocated and click **Next**.
-  * Software Component: **HOME**
+44. Enter the following information and click **Next**:
+  * Name: **<< Your custom HTTP service name >>** (for example: ZGET_SYSTEM_DETAILS).
+  * Description: **<< Your custom HTTP service  description >>** (for example: GET Backend System Details).
+  * Add to favorite packages: **Inactive**
 
-  ![Step27](images/step27.png)
+  **NOTE** - The value in parameter **Handler Class** will be updated automatically, do not modify this value.
 
-28. Select an existing transport request or create a new one to save your changes and click **Finish**
+  ![Step44](images/step44.png)
+
+45. Select an existing transport request or create a new one to save your changes and click **Finish**
 
   ![Step19](images/step19.png)
 
-29. Once created, package details will be displayed in the screen.
+46. On successful creation you will notice two objects have been generated: an HTTP service and a Handler Class. Navigate to the Handler Class by clicking on text "Handler Class".
 
-  **NOTE** - Your new package should also appear under the **Favorite Packages** folder.
+  ![Step46](images/step46.png)
 
-  ![Step29](images/step29.png)
+47. Copy the code from our [sample](sources/ZCL_GET_SYSTEM_DETAILS.abap) into this handler class. **Save** and **Activate**.
+
+  ![Step47](images/step47.png)
+
+48. When trying to activate a critical error will be displayed which would not allow you to activate this object.
+
+  ![Step48](images/step48.png)
+
+  **NOTE** - The error is generated because the most important step to consume the backend wrapper is missing. In the next section you will find how to add a Release Contract to the backend wrapper function module. Be aware that when coding in Embedded Steampunk, you may only consume "cloud-released" objects.
 
 ## Adding a Release Contact
 In this section we will briefly explain what the copied code is doing.
@@ -45,8 +52,8 @@ In this section we will briefly explain how to test the code.
 
 
 ## Next Steps
-In the next section you will create the second object in our custom development architecture: **a Custom Fiori Launchpa Service (number 2 in the diagram)**.
+In the next section you will create the second object in our custom development architecture: **a Custom Fiori Launchpad Service (number 2 in the diagram)**.
 
   ![Development Architecture](images/dev_arch.png)
 
-To continue with this exercise go to [Exercise 3](../ex_3)
+To continue with this exercise go to [Exercise 4](../ex_4)

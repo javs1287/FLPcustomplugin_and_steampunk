@@ -91,17 +91,17 @@ In this section you will modify the manifest.json and component.js files to setu
 
   ![Step73](images/step73.png)
 
-74. Open the Component.js file in your project and take note of the value of the **Full Component Name** value from the **return UIComponent.extend** statement.
+74. Open the Component.js file in your project and take note of the value of the **Full Component Name** from the **return UIComponent.extend** statement.
 
   ![Step74](images/step74.png)
 
-75. Copy the code from the [sample manifest.json](sources/manifest.json) file into your code.
+75. Copy the code from the [sample Component.js](sources/Component.js) file into your code.
 
   ![Step75](images/step75.png)
 
-  **NOTE** - Plugins do not require additional definitions, this would be the simplest version of a manifest.json file and the base for creating an FLP plugin.
+  **NOTE** - We will explain what the code is doing in the following section.
 
-76. Edit the values of parameters **ID** and **componentName** with the value you identified on **Step 71**.
+76. Edit the values of your **Full Component Name** in the **return Component.extend** statement with the value you identified on **Step 74**.
 
   ![Step76](images/step76.png)
 

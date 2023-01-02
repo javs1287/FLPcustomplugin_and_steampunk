@@ -122,7 +122,7 @@ In the [manifest.json](sources/manifest.json) file, we define the app type and a
 ### Component.js
 In the [Component.js](sources/Component.js) file we add the code to decide when the plugin will and if it should be rendered and make the call to the HTTP service to the response from this web call into the SAP Fiori Launchpad header title.
 
-    ![Step78](images/step78.png)
+  ![Step78](images/step78.png)
 
 78. In this section we are initializaing the plugin, at this moment the code will first call the backend service through the **_getTitle function** followed by retrieving an instance of the FLP header through the **_getRenderer function**. Once the renderer becomes available, we set the response text from our backend service as a title through the **setHeaderTitle method** of the rendered instance (at this moment the rendered instance is the FLP header).
 

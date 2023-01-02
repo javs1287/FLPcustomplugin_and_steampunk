@@ -6,9 +6,33 @@ In this section you will find the required steps to create a new SAP Fiori Launc
 ## Create a new BAS project
 You should start by creating a new BAS project using the standard project generators for a freestyle application. To do this follow the next steps:
 
-61. Create a new project in ADT.
+61. Launch BAS. Once loaded, go to **File >> New Project from Template**.
 
-  ![New Project](images/new_project.png)
+  ![Step61](images/step61.png)
+
+62. Select **SAP Fiori Application** generator and click on **Start**
+
+  ![Step62](images/step62.png)
+
+63. Select **SAPUI5 freestyle** from **application type** dropdown, followed by selecting the **SAPUI5 Application** generator and clicking on **Next**.
+
+  ![Step63](images/step63.png)
+
+64. Enter the details of your adaptation project where XX represents your developer ID and continue:
+
+- Project Name: ZPOEXT.NOTIF.XX
+- Application Title: Send Notifications
+- Namespace: <Updated automatically>
+
+  ![Step61](images/step61.png)
+
+65. Define backend destination and login to retrieve available services.On successful authentication you will see the list of available apps.
+
+66. Type application name “Manage Purchase Orders” and select it from the dropdown menu.
+
+  ![Step61](images/step61.png)
+
+67. Use default values for field “Select SAP UI5 version” and click on Finish.
 
 ## Adapt Generated Project
 The generated project is created as a freestyle application, meaning it is considering navigation routers, controllers and views to be displayed as an SAP Fiori app. Unfortunately, in our case we need to create an SAP Fiori Launchpad Plugin, which is the simplest form of an app and is actually called a **Component**.

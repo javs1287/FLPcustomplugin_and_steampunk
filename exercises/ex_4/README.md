@@ -75,7 +75,35 @@ Follow the next steps to adjust the current project structure to behave as an SA
 **NOTE** - As we have modified the project structure and deleted test files, you will not be able to test the plugin from BAS, you would need to deploy the plugin to the on-premise system for testing.
 
 ## Adapt Component.js and Manifest.json files
-In this section you will modify the manifest.json and component.js files to setup the SAP Fiori Launchpad plugin and include business logic to make a call to your custom HTTP service (created in [Exercise 3](../ex_3))
+In this section you will modify the manifest.json and component.js files to setup the SAP Fiori Launchpad plugin and include business logic to make a call to your custom HTTP service (created in [Exercise 3](../ex_3)).
+
+71. Open the manifest.json file in your project and take note of the value of the **ID** parameter.
+
+  ![Step71](images/step71.png)
+
+72. Copy the code from the [sample manifest.json](sources/manifest.json) file into your code.
+
+  ![Step72](images/step72.png)
+
+  **NOTE** - Plugins do not require additional definitions, this would be the simplest version of a manifest.json file and the base for creating an FLP plugin.
+
+73. Edit the values of parameters **ID** and **componentName** with the value you identified on **Step 71**.
+
+  ![Step73](images/step73.png)
+
+74. Open the Component.js file in your project and take note of the value of the **Full Component Name** value from the **return UIComponent.extend** statement.
+
+  ![Step74](images/step74.png)
+
+75. Copy the code from the [sample manifest.json](sources/manifest.json) file into your code.
+
+  ![Step75](images/step75.png)
+
+  **NOTE** - Plugins do not require additional definitions, this would be the simplest version of a manifest.json file and the base for creating an FLP plugin.
+
+76. Edit the values of parameters **ID** and **componentName** with the value you identified on **Step 71**.
+
+  ![Step76](images/step76.png)
 
 ## What does this code do?
 In this section we will briefly explain what the copied code is doing.

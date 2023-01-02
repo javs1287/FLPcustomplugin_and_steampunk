@@ -21,6 +21,7 @@ You need to ensure the fulfillment of all of the following points for you to suc
 * You have fully configured SAP Fiori and have developer access to the backend system where embedded SAP Fiori is deployed.
 * You have fully setup Cloud Connector and created a destination to your backend S/4HANA system.
 * You have fully setup SAP Business application Studio including the setup of Development Spaces.
+* You have access to creation+read access of transport requests in your SAP Backend system for both customizing and workbench requests.
 
 ## Exercises
 

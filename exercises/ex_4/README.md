@@ -42,6 +42,9 @@ You should start by creating a new BAS project using the standard project genera
 
   ![Step66](images/step66.png)
 
+67. Once the project is generated you should find a new folder in your workspace containing the folder structure of the project.
+
+  ![Step67](images/step67.png)
 
 ## Adapt Generated Project
 The generated project is created as a freestyle application, meaning it is considering navigation routers, controllers and views to be displayed as an SAP Fiori app. Unfortunately, in our case we need to create an SAP Fiori Launchpad Plugin, which is the simplest form of an app and is actually called a **Component**.

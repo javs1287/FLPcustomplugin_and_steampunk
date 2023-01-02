@@ -26,7 +26,7 @@ You should start by creating a new BAS project using the standard project genera
 
   ![Step65](images/step65.png)
 
-66. Enter the following details and click on **Finish**
+66. Enter the following details and click on **Finish**:
 
 | **Parameter**                 | **Value**                                                                        |
 |-------------------------------|------------------------------------------------------------------------------|

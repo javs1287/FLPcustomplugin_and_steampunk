@@ -122,14 +122,17 @@ In the [manifest.json](sources/manifest.json) file, we define the app type and a
 ### Component.js
 In the [Component.js](sources/Component.js) file we add the code to decide when the plugin will and if it should be rendered and make the call to the HTTP service to the response from this web call into the SAP Fiori Launchpad header title.
 
+#### Init function()
   ![Step78](images/step78.png)
 
 78. In this section we are initializaing the plugin, at this moment the code will first call the backend service through the **_getTitle function** followed by retrieving an instance of the FLP header through the **_getRenderer function**. Once the renderer becomes available, we set the response text from our backend service as a title through the **setHeaderTitle method** of the rendered instance (at this moment the rendered instance is the FLP header).
 
+#### _getTitle function()
   ![Step79](images/step79.png)
 
-79. In the **getTitle function** we run a call to the backend custom HTTP service in Steampunk. We run this call using **jQuery GET** function with a **relative URL** (as we have an embedded deployment of SAP Fiori). If needed, we could make some additional processing of the data in the response or add extra functions to handle call service failure. For the purpose of this exercise we will not provide such implementations.
+79. In the **_getTitle function** we run a call to the backend custom HTTP service in Steampunk. We run this call using **jQuery GET** function with a **relative URL** (as we have an embedded deployment of SAP Fiori). If needed, we could make some additional processing of the data in the response or add extra functions to handle call service failure. For the purpose of this exercise we will not provide such implementations.
 
+#### _getRenderer function()
   ![Step80](images/step80.png)
 
 80. The **_getRenderer function** is a generic renderer implementation you can use in any of your custom plugin developments. In this function we identify when the plugin is rendered and once rendered we use the functions in the object (like **setHeaderTitle method**). This implementation is needed as you need to call your functions once the plugin is rendered (which is an unknown variable at runtime) otherwise your code would run as part of the main Fiori Launchpad shell initialization, causing **not found** errors.

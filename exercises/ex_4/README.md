@@ -51,6 +51,29 @@ The generated project is created as a freestyle application, meaning it is consi
 
 Follow the next steps to adjust the current project structure to behave as an SAP Fiori Component.
 
+68. You will need to delete the following folders and their contents by right clicking on the folder and selecting **Delete Permanently** from the menu.
+
+| Folder to delete |
+|------------------|
+| controller       |
+| css              |
+| model            |
+| test             |
+| utils            |
+| view             |
+
+  ![Step68](images/step68.png)
+
+69. Once all mentioned folders are deleted, you should also delete the **index.html** file.
+
+  ![Step69](images/step69.png)
+
+70. With all files and folder deleted, your project should only contain the i18n folder, component.js and manifest.json files.
+
+  ![Step70](images/step70.png)
+
+**NOTE** - As we have modified the project structure and deleted test files, you will not be able to test the plugin from BAS, you would need to deploy the plugin to the on-premise system for testing.
+
 ## Adapt Component.js and Manifest.json files
 In this section you will modify the manifest.json and component.js files to setup the SAP Fiori Launchpad plugin and include business logic to make a call to your custom HTTP service (created in [Exercise 3](../ex_3))
 

@@ -72,7 +72,7 @@ Follow the next steps to adjust the current project structure to behave as an SA
 
   ![Step70](images/step70.png)
 
-**NOTE** - As we have modified the project structure and deleted test files, you will not be able to test the plugin from BAS, you would need to deploy the plugin to the on-premise system for testing.
+**NOTE** - As we have modified the project structure and deleted test files, you will not be able to test the plugin from BAS, you would need to deploy the plugin to the on-premise system for testing. Plugin deployment is explained in the following sections.
 
 ## Adapt Component.js and Manifest.json files
 In this section you will modify the manifest.json and component.js files to setup the SAP Fiori Launchpad plugin and include business logic to make a call to your custom HTTP service (created in [Exercise 3](../ex_3)).
@@ -107,6 +107,34 @@ In this section you will modify the manifest.json and component.js files to setu
 
 ## What does this code do?
 In this section we will briefly explain what the copied code is doing.
+
+### Manifest.json
+In the [manifest.json](sources/manifest.json) file, we define the app type and additional dependencies of the plugin:
+
+  ![Step77](images/step77.png)
+
+77.1 In this section we provide the basic definition of the plugin with information like version, component ID and title. Note that the most important parameter is **type** as here we define the object as a **component**, instead of an application also important is to identify that all other parameters from the application generator template inserted while running the generator have been removed as they are not needed by the plugin.
+
+77.2 This is a new section that must be added manually each time you create a new plugin. With this section you let the SAP Fiori Launchpad understand that the code from this project will be a plugin.
+
+77.3 These are summarized versions of the **sap.ui** and **sap.ui5** collections, in here we add the parameters needed by the plugin, all other parameters are removed as they are only useful for **applications**. Note that parameter **componentName** should match with parameter **id** from section 1.
+
+### Component.js
+In the [Component.js](sources/Component.js) file we add the code to decide when the plugin will and if it should be rendered and make the call to the HTTP service to the response from this web call into the SAP Fiori Launchpad header title.
+
+    ![Step78](images/step78.png)
+
+78. In this section we are initializaing the plugin, at this moment the code will first call the backend service through the **_getTitle function** followed by retrieving an instance of the FLP header through the **_getRenderer function**. Once the renderer becomes available, we set the response text from our backend service as a title through the **setHeaderTitle method** of the rendered instance (at this moment the rendered instance is the FLP header).
+
+  ![Step79](images/step79.png)
+
+79. In the **getTitle function** we run a call to the backend custom HTTP service in Steampunk. We run this call using **jQuery GET** function with a **relative URL** (as we have an embedded deployment of SAP Fiori). If needed, we could make some additional processing of the data in the response or add extra functions to handle call service failure. For the purpose of this exercise we will not provide such implementations.
+
+  ![Step80](images/step80.png)
+
+80. The **_getRenderer function** is a generic renderer implementation you can use in any of your custom plugin developments. In this function we identify when the plugin is rendered and once rendered we use the functions in the object (like **setHeaderTitle method**). This implementation is needed as you need to call your functions once the plugin is rendered (which is an unknown variable at runtime) otherwise your code would run as part of the main Fiori Launchpad shell initialization, causing **not found** errors.
+
+## Deploy your Plugin to your SAP S/4HANA backend system.
 
 ## Next Steps
 In the next section you will activate your custom SAP Fiori Launchpad Plugin on your ABAP platform.

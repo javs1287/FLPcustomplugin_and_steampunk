@@ -18,21 +18,29 @@ You should start by creating a new BAS project using the standard project genera
 
   ![Step63](images/step63.png)
 
-64. Enter the details of your adaptation project where XX represents your developer ID and continue:
+64. Select **Data source = None** and click on **Next**.
 
-- Project Name: ZPOEXT.NOTIF.XX
-- Application Title: Send Notifications
-- Namespace: <Updated automatically>
+  ![Step64](images/step64.png)
 
-  ![Step61](images/step61.png)
+65. Use default value for field **View name** and click on **Next**.
 
-65. Define backend destination and login to retrieve available services.On successful authentication you will see the list of available apps.
+  ![Step65](images/step65.png)
 
-66. Type application name “Manage Purchase Orders” and select it from the dropdown menu.
+66. Enter the following details and click on **Finish**
 
-  ![Step61](images/step61.png)
+| Module Name:                  | **<Your plugin module name>** (for example: **flpplugindemo**)               |
+|-------------------------------|------------------------------------------------------------------------------|
+| Application Title:            | **<Your plugin title>** (for example: **FLPplugin demo**)                    |
+| Application Namespace:        | **<Your plugin namespace>** (for example: **com.sap.rig.demoplugin**)        |
+| Description:                  | **<Your plugin description>** (for example: **A Fiori plugin**)              |
+| Project folder path:          | **<Your project root folder in BAS>** (for example: **/home/user/projects**) |
+| Minimum SAPUI5 version:       | **<Your backend system SAPUI5 library version>** (for example: **1.109.3**)  |
+| Add deployment Configuration: | **No**                                                                       |
+| Add FLP configuration         | **No**                                                                       |
+| Configure advanced options    | **No**                                                                       |
 
-67. Use default values for field “Select SAP UI5 version” and click on Finish.
+  ![Step66](images/step66.png)
+
 
 ## Adapt Generated Project
 The generated project is created as a freestyle application, meaning it is considering navigation routers, controllers and views to be displayed as an SAP Fiori app. Unfortunately, in our case we need to create an SAP Fiori Launchpad Plugin, which is the simplest form of an app and is actually called a **Component**.

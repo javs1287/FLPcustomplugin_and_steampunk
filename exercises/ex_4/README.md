@@ -28,8 +28,9 @@ You should start by creating a new BAS project using the standard project genera
 
 66. Enter the following details and click on **Finish**
 
-| Module Name:                  | **< Your plugin module name >** (for example: **flpplugindemo**)               |
+| **Parameter**                 | **Value**                                                                        |
 |-------------------------------|------------------------------------------------------------------------------|
+| Module Name:                  | **< Your plugin module name >** (for example: **flpplugindemo**)               |
 | Application Title:            | **< Your plugin title >** (for example: **FLPplugin demo**)                    |
 | Application Namespace:        | **< Your plugin namespace >** (for example: **com.sap.rig.demoplugin**)        |
 | Description:                  | **< Your plugin description >** (for example: **A Fiori plugin**)              |

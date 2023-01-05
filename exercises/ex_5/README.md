@@ -3,7 +3,7 @@
 ## Introduction
 In this section you will find the required steps to activate your custom plugin in your on-premise ABAP Platform, once deployment of SAP Business Application Project is successful.
 
-## Create a new ABAP Project in ADT (Eclipse)
+## Setup plugin configuration
 You will now activate your SAP Fiori Launchpad Plugin using the newest tools. To do this follow the next steps:
 
 95. Login to your system in GUI or WebGUI through FLP and run transaction: **/n/ui2/flp_conf_def**.

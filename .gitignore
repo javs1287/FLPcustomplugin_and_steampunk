@@ -2,3 +2,6 @@
 *.pptx
 ~$*
 ex_0/*.pptx
+.DS_Store
+*.pptx
+overview.docx
